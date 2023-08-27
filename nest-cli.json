@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/waiter/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/waiter/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/waiter",
+  "projects": {
+    "cerberos": {
+      "type": "application",
+      "root": "apps/cerberos",
+      "entryFile": "main",
+      "sourceRoot": "apps/cerberos/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cerberos/tsconfig.app.json"
+      }
+    },
+    "waiter": {
+      "type": "application",
+      "root": "apps/waiter",
+      "entryFile": "main",
+      "sourceRoot": "apps/waiter/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/waiter/tsconfig.app.json"
+      }
+    },
+    "orders": {
+      "type": "application",
+      "root": "apps/orders",
+      "entryFile": "main",
+      "sourceRoot": "apps/orders/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/orders/tsconfig.app.json"
+      }
+    }
+  }
+}
